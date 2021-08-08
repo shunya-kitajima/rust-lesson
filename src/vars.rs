@@ -63,8 +63,8 @@ pub fn run() {
   let mut s2 = String::from("helloworld");
   println!("Stack address of s1 is : {:p}", &s1);
   println!("Stack address of s2 is : {:p}", &s2);
-  println!("Heep memory address of s1 is : {:?}", s1.as_ptr());
-  println!("Heep memory address of s2 is : {:?}", s2.as_ptr());
+  println!("Heap memory address of s1 is : {:?}", s1.as_ptr());
+  println!("Heap memory address of s2 is : {:?}", s2.as_ptr());
   println!("Len of s1 is : {}", s1.len());
   println!("Len of s2 is : {}", s2.len());
   println!("Capacity of s1 is : {}", s1.capacity());
