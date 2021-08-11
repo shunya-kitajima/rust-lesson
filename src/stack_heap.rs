@@ -1,3 +1,8 @@
+enum List {
+  Node(i32, Box<List>),
+  Nil,
+}
+
 pub fn run() {
   // let a1: [u8; 9000000] = [1; 9000000];
 
@@ -16,4 +21,16 @@ pub fn run() {
   v1.append(&mut v3);
   println!("{:?}", v1);
   println!("{:?}", v3);
+
+  let t1: (i64, String) = (10, String::from("hello"));
+  println!("Stack address of t1 is : {:p}", &t1);
+  println!("Heap memory address of t1 is : {:?}", t1.1.as_ptr());
+  println!("Len of t1 is : {:?}", t1.1.len());
+  println!("Capacity of t1 is : {}", t1.1.capacity());
+  let mut b1 = Box::new(t1);
+  (*b1).1 += "world";
+  println!("{} {}", b1.0, b1.1);
+  println!("Stack address of b1 is : {:p}", &b1);
+  println!("Heap address of b1 is : {:p}", b1);
+  println!("Heap memory address of b1 is : {:?}", &b1.1.as_ptr());
 }
