@@ -31,7 +31,7 @@ fn get_longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 //   &x
 // }
 
-fn dummy3<'a>() -> String {
-  let s = String::from("demo");
-  s
-}
+// fn dummy3<'a>() -> String {
+//   let s = String::from("demo");
+//   s
+// }
