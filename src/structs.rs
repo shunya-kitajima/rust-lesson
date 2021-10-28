@@ -1,4 +1,3 @@
-#[derive(Debug)]
 struct User {
   username: String,
   email: String,
@@ -6,7 +5,6 @@ struct User {
   active: bool,
 }
 
-#[derive(Debug)]
 struct Rectangle {
   width: u32,
   height: u32,
