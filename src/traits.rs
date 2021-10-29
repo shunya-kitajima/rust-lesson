@@ -42,9 +42,12 @@ struct NewsArticle {
 }
 
 impl Summary for NewsArticle {
-  // fn summarize(&self) -> String {
-  //   format!("{}, by {} ({})", self.headline, self.author, self.location)
-  // }
+  fn summarize(&self) -> String {
+    format!(
+      "{}, by {} ({}) content: {}",
+      self.headline, self.author, self.location, self.content
+    )
+  }
 }
 
 impl Message for NewsArticle {}
@@ -58,7 +61,10 @@ struct Tweet {
 
 impl Summary for Tweet {
   fn summarize(&self) -> String {
-    format!("{}: {}", self.username, self.content)
+    format!(
+      "{}: {}, reply: {}, retweet:{}",
+      self.username, self.content, self.reply, self.retweet
+    )
   }
 }
 
