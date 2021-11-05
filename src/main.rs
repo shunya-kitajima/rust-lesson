@@ -8,6 +8,7 @@
 // mod traits;
 mod error_handling;
 mod unit_test;
+extern crate lib_demo;
 
 fn main() {
 	// println!("Hello, world!");
@@ -22,4 +23,5 @@ fn main() {
 	// enums::run();
 	// traits::run();
 	error_handling::run();
+	lib_demo::print_random_number();
 }
