@@ -9,6 +9,7 @@
 mod error_handling;
 mod unit_test;
 extern crate lib_demo;
+mod debug;
 
 fn main() {
 	// println!("Hello, world!");
@@ -24,4 +25,5 @@ fn main() {
 	// traits::run();
 	error_handling::run();
 	lib_demo::print_random_number();
+	debug::run();
 }
